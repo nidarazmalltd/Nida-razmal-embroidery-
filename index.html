@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nida Razmal LTD | Embroidery</title>
+<meta name="description" content="Nida Razmal LTD — premium embroidery products, traditional designs and custom bulk orders from Kandahar, Afghanistan.">
+<style>
+:root{
+  --navy:#071a30;
+  --navy2:#0d2745;
+  --gold:#c9973e;
+  --gold2:#e0b45b;
+  --cream:#f8f5ee;
+  --text:#17253a;
+  --muted:#697586;
+  --white:#fff;
+  --border:#e9e7e1;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--text);font-family:Georgia,"Times New Roman",serif;background:#fff}
+a{text-decoration:none}
+.topbar{background:var(--navy);color:#dfe7ef;padding:9px 5%;display:flex;justify-content:space-between;font:12px Arial,sans-serif}
+nav{height:82px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 5%;position:sticky;top:0;z-index:20;box-shadow:0 2px 18px #071a3010}
+.brand{display:flex;align-items:center;gap:12px;color:var(--navy)}
+.brand img{width:58px;height:58px;object-fit:contain}
+.brand b{display:block;font-size:21px;letter-spacing:.2px}
+.brand span{display:block;font:13px Arial;color:#777;margin-top:2px}
+.navlinks{display:flex;align-items:center;gap:22px;font:13px Arial}
+.navlinks a{color:var(--navy)}
+.navlinks .quote{background:var(--navy);color:#fff;padding:12px 17px;border-radius:4px}
+.langs{display:flex;gap:5px;margin-left:3px}
+.langs button{border:1px solid #d8c08b;background:#fff;color:var(--navy);padding:6px 8px;border-radius:3px;cursor:pointer;font:11px Arial}
+.langs button.active{background:var(--navy);color:#fff}
+.menu-btn{display:none;border:0;background:none;color:var(--navy);font-size:30px;cursor:pointer}
+
+.hero{background:var(--navy);min-height:610px;display:grid;grid-template-columns:46% 54%;overflow:hidden}
+.hero-copy{padding:76px 9%;display:flex;flex-direction:column;justify-content:center;color:#fff}
+.kicker{color:var(--gold2);font:12px Arial;letter-spacing:3px;text-transform:uppercase}
+.hero h1{font-size:clamp(46px,5.2vw,76px);line-height:1.02;font-weight:500;margin:20px 0 17px}
+.hero p{font:16px/1.75 Arial;color:#dce5ee;max-width:520px;margin:0}
+.hero-buttons{margin-top:26px;display:flex;gap:11px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:4px;font:13px Arial;min-width:155px}
+.btn.gold{background:var(--gold);color:#fff}
+.btn.outline{border:1px solid #fff;color:#fff}
+.hero-visual{position:relative;min-height:610px;background:var(--navy2);overflow:hidden}
+.hero-visual img{width:100%;height:100%;object-fit:cover;opacity:.86}
+.hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,transparent 28%,transparent 100%)}
+.gold-edge{position:absolute;left:0;right:0;bottom:-1px;height:28px;background:var(--cream);clip-path:polygon(0 100%,100% 0,100% 100%)}
+
+.section{max-width:1260px;margin:auto;padding:76px 5%}
+.title{text-align:center;margin-bottom:40px}
+.eyebrow{color:var(--gold);font:11px Arial;letter-spacing:3px;text-transform:uppercase}
+.title h2{font-size:40px;font-weight:500;margin:9px 0}
+.line{width:58px;height:2px;background:var(--gold);margin:13px auto}
+.title p{font:14px Arial;color:var(--muted);margin:0}
+
+.features{background:var(--cream);display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:35px 5%}
+.feature{display:flex;gap:12px}
+.icon{width:46px;height:46px;flex:none;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:20px}
+.feature h3{font-size:16px;margin:1px 0 6px}
+.feature p{font:12px/1.55 Arial;color:var(--muted);margin:0}
+
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.product-card{display:grid;grid-template-columns:43% 57%;border:1px solid var(--border);border-radius:9px;overflow:hidden;background:#fff;box-shadow:0 8px 28px #17253a0d;min-height:285px;transition:.2s}
+.product-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px #17253a16}
+.product-photo{min-height:285px;background:#f2f2f2;overflow:hidden;cursor:pointer}
+.product-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}
+.product-card:hover .product-photo img{transform:scale(1.035)}
+.product-info{padding:23px}
+.product-number{display:inline-block;border-radius:50%;background:var(--navy);color:#fff;width:30px;height:30px;text-align:center;line-height:30px;font:11px Arial;padding-top:9px}
+.product-info h3{font-size:21px;margin:11px 0 8px}
+.desc{font:13px/1.65 Arial;color:var(--muted);margin:0 0 14px}
+.meta{border-top:1px solid #eee;padding-top:12px;display:grid;gap:7px;font:12px/1.45 Arial;color:#5d6978}
+.meta b{color:var(--navy)}
+.details{display:inline-block;margin-top:15px;color:var(--gold);font:12px Arial;font-weight:bold;letter-spacing:.2px}
+
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:60px;align-items:center}
+.about-card{background:var(--navy);color:#fff;padding:34px;border-radius:8px;position:relative;overflow:hidden}
+.about-card:after{content:"NMR";position:absolute;right:-15px;bottom:-35px;font:110px Georgia;color:#fff08;opacity:.08}
+.about-card h3{font-size:29px;font-weight:500;margin:0 0 12px}
+.about-card p{font:13px/1.75 Arial;color:#dbe3ec}
+.about-copy h2{font-size:38px;font-weight:500;margin:8px 0 15px}
+.about-copy p{font:14px/1.85 Arial;color:#5e6a79}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:24px}
+.stat{text-align:center;border-left:1px solid #ddd;padding:10px}
+.stat:first-child{border-left:0}
+.stat b{font-size:25px}
+.stat span{display:block;font:11px Arial;color:var(--muted);margin-top:5px}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.gallery-item{height:230px;overflow:hidden;border-radius:8px;background:#eee;cursor:pointer}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.gallery-item:hover img{transform:scale(1.06)}
+
+.why{background:var(--navy);color:#fff}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.why h2{font-size:38px;font-weight:500;margin:8px 0 18px}
+.why p{font:14px/1.8 Arial;color:#cbd5df}
+.why-list{display:grid;gap:18px}
+.why-item{display:flex;gap:15px;align-items:flex-start}
+.why-item .icon{width:43px;height:43px}
+.why-item h3{font-size:17px;margin:0 0 5px;color:var(--gold2)}
+.why-item p{margin:0;font-size:12px;line-height:1.6}
+
+.cta{background:var(--gold);color:#fff;padding:34px 5%;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.cta h2{font-size:30px;font-weight:500;margin:0 0 7px}
+.cta p{font:13px Arial;margin:0;color:#fff}
+.cta .btn{background:var(--navy);min-width:160px}
+
+footer{background:#061528;color:#d8e0e8;padding:44px 5% 18px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}
+footer h3{color:#fff;margin:0 0 13px}
+footer p,footer a{font:12px/1.8 Arial;color:#aeb9c7;margin:0 0 5px}
+.footer-brand{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.footer-brand img{width:50px;height:50px;object-fit:contain}
+.copyright{border-top:1px solid #ffffff16;margin-top:27px;padding-top:15px;text-align:center;font:11px Arial;color:#8997a8}
+
+#lightbox{position:fixed;inset:0;background:#061528ed;display:none;align-items:center;justify-content:center;padding:20px;z-index:100}
+#lightbox.show{display:flex}
+#lightbox img{max-width:94vw;max-height:90vh;object-fit:contain;border-radius:7px}
+#lightbox button{position:absolute;top:15px;right:20px;background:none;border:0;color:#fff;font-size:40px;cursor:pointer}
+
+.mobile-menu{display:none}
+.rtl{direction:rtl}
+.rtl .hero,.rtl .about-grid,.rtl .why-grid,.rtl .cta{direction:rtl}
+.rtl .brand{direction:rtl}
+.rtl .topbar{direction:rtl}
+.rtl .stat{border-left:0;border-right:1px solid #ddd}
+.rtl .stat:first-child{border-right:0}
+.rtl .meta,.rtl .desc,.rtl footer{text-align:right}
+
+@media(max-width:900px){
+  .topbar{display:none}
+  nav{height:72px;padding:0 5%}
+  .navlinks{display:none}
+  .menu-btn{display:block}
+  .mobile-menu{position:absolute;top:72px;left:0;right:0;background:#fff;padding:15px 5%;box-shadow:0 12px 25px #0002}
+  .mobile-menu.show{display:grid;gap:5px}
+  .mobile-menu a{padding:12px 5px;color:var(--navy);font:14px Arial;border-bottom:1px solid #eee}
+  .mobile-menu .quote{background:var(--navy);color:#fff;text-align:center;border-radius:4px;margin-top:5px}
+  .mobile-langs{display:flex;gap:6px;padding-top:10px}
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:58px 8%;min-height:470px}
+  .hero-visual{height:330px;min-height:330px}
+  .features{grid-template-columns:1fr 1fr}
+  .products-grid{grid-template-columns:1fr}
+  .about-grid,.why-grid{grid-template-columns:1fr;gap:30px}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .brand img{width:48px;height:48px}
+  .brand b{font-size:18px}
+  .brand span{font-size:11px}
+  .hero h1{font-size:45px}
+  .hero-copy{min-height:455px;padding:48px 7%}
+  .hero-visual{height:270px;min-height:270px}
+  .hero-buttons{display:grid;gap:9px}
+  .btn{width:100%}
+  .section{padding:58px 5%}
+  .title h2,.about-copy h2,.why h2{font-size:32px}
+  .features{grid-template-columns:1fr;padding:27px 6%}
+  .product-card{grid-template-columns:1fr}
+  .product-photo{height:330px;min-height:330px}
+  .product-info{padding:20px}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-item{height:300px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(3),.stat:nth-child(4){border-top:1px solid #ddd;padding-top:16px}
+  .footer-grid{grid-template-columns:1fr}
+  .cta{display:grid;padding:30px 7%}
+}
+
+.contact-link{color:inherit;text-decoration:none;font-weight:600}.contact-link:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div>✦ Premium Embroidery Products &nbsp; • &nbsp; Worldwide Shipping</div>
+  <div>✉ nidarazmalltd@gmail.com &nbsp; ☎ +93 70 410 0130</div>
+</div>
+
+<nav>
+  <a class="brand" href="#home">
+    <img src="image_1.webp" alt="Nida Razmal LTD logo">
+    <div><b>Nida Razmal LTD</b><span>Embroidery</span></div>
+  </a>
+
+  <div class="navlinks">
+    <a href="#home" data-i="home">Home</a>
+    <a href="#products" data-i="products">Products</a>
+    <a href="#gallery" data-i="gallery">Gallery</a>
+    <a href="#about" data-i="about">About Us</a>
+    <a href="#why" data-i="why">Why Us</a>
+    <a href="#contact" data-i="contact">Contact</a>
+    <a class="quote" href="#contact" data-i="quote">Get a Quote</a>
+    <div class="langs">
+      <button onclick="setLang('ps')">پښتو</button>
+      <button onclick="setLang('fa')">دري</button>
+      <button onclick="setLang('en')" class="active">English</button>
+    </div>
+  </div>
+
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu">☰</button>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" data-i="home">Home</a>
+    <a href="#products" data-i="products">Products</a>
+    <a href="#gallery" data-i="gallery">Gallery</a>
+    <a href="#about" data-i="about">About Us</a>
+    <a href="#why" data-i="why">Why Us</a>
+    <a href="#contact" data-i="contact">Contact</a>
+    <a class="quote" href="#contact" data-i="quote">Get a Quote</a>
+    <div class="mobile-langs">
+      <button onclick="setLang('ps')">پښتو</button>
+      <button onclick="setLang('fa')">دري</button>
+      <button onclick="setLang('en')">English</button>
+    </div>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="kicker">NIDA RAZMAL LTD</div>
+    <h1 data-i="heroTitle">Exquisite<br>Embroidery<br>Products</h1>
+    <p data-i="heroText">Traditional craftsmanship, premium quality and timeless beauty in every stitch.</p>
+    <div class="hero-buttons">
+      <a class="btn gold" href="#products" data-i="ourProducts">OUR PRODUCTS →</a>
+      <a class="btn outline" href="#contact" data-i="contactUs">☎ CONTACT US</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <img src="product-01.webp" alt="Embroidered fabric">
+    <div class="gold-edge"></div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature"><div class="icon">◇</div><div><h3 data-i="premiumQuality">Premium Quality</h3><p data-i="premiumQualityDesc">Fine materials and careful craftsmanship.</p></div></div>
+  <div class="feature"><div class="icon">⚙</div><div><h3 data-i="bulkOrders">Custom Orders</h3><p data-i="bulkOrdersDesc">Custom designs and wholesale production.</p></div></div>
+  <div class="feature"><div class="icon">◎</div><div><h3 data-i="worldwideShipping">Worldwide Shipping</h3><p data-i="worldwideShippingDesc">Secure delivery for international customers.</p></div></div>
+  <div class="feature"><div class="icon">✓</div><div><h3 data-i="trusted">Trusted Company</h3><p data-i="trustedDesc">Professional service and reliable quality.</p></div></div>
+</section>
+
+<section class="section" id="products">
+  <div class="title">
+    <div class="eyebrow">Premium Quality</div>
+    <h2 data-i="productsTitle">Our Products</h2>
+    <div class="line"></div>
+    <p data-i="productsSub">Premium quality embroidery fabrics & products</p>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-photo"><img src="product-01.webp" alt="Turquoise embroidered fabric" onclick="openLight(this)"></div>
+      <div class="product-info"><div class="product-number">01</div><h3 data-i="p1">Turquoise Embroidered Fabric</h3><p class="desc" data-i="p1d">A turquoise fabric featuring colorful floral embroidery and decorative vertical borders.</p><div class="meta"><div><b data-i="style">Style:</b> <span data-i="p1s">Floral traditional embroidery</span></div><div><b data-i="use">Use:</b> <span data-i="p1u">Garments, shawls and textile designs</span></div><div><b data-i="order">Order:</b> <span data-i="orderText">Bulk & custom orders</span></div></div><a class="details" href="#contact" data-i="details">VIEW DETAILS →</a></div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-photo"><img src="product-02.webp" alt="Gold embroidered dress" onclick="openLight(this)"></div>
+      <div class="product-info"><div class="product-number">02</div><h3 data-i="p2">Gold Embroidered Dress</h3><p class="desc" data-i="p2d">An ornate gold-toned dress with detailed embroidery and decorative borders.</p><div class="meta"><div><b data-i="style">Style:</b> <span data-i="p2s">Elegant formal embroidery</span></div><div><b data-i="use">Use:</b> <span data-i="p2u">Traditional and formal clothing</span></div><div><b data-i="order">Order:</b> <span data-i="orderText">Bulk & custom orders</span></div></div><a class="details" href="#contact" data-i="details">VIEW DETAILS →</a></div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-photo"><img src="product-03.webp" alt="Black embroidered fabric" onclick="openLight(this)"></div>
+      <div class="product-info"><div class="product-number">03</div><h3 data-i="p3">Black Embroidered Fabric</h3><p class="desc" data-i="p3d">Black fabric decorated with colorful floral motifs and flowing embroidered borders.</p><div class="meta"><div><b data-i="style">Style:</b> <span data-i="p3s">Floral border embroidery</span></div><div><b data-i="use">Use:</b> <span data-i="p3u">Garments and traditional textile work</span></div><div><b data-i="order">Order:</b> <span data-i="orderText">Bulk & custom orders</span></div></div><a class="details" href="#contact" data-i="details">VIEW DETAILS →</a></div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-photo"><img src="product-04.webp" alt="Detailed floral embroidery" onclick="openLight(this)"></div>
+      <div class="product-info"><div class="product-number">04</div><h3 data-i="p4">Detailed Floral Embroidery</h3><p class="desc" data-i="p4d">A close-up example showing fine floral motifs, leaves and decorative stitched details.</p><div class="meta"><div><b data-i="style">Style:</b> <span data-i="p4s">Fine floral embroidery</span></div><div><b data-i="use">Use:</b> <span data-i="p4u">Decorative textile panels and garments</span></div><div><b data-i="order">Order:</b> <span data-i="orderText">Bulk & custom orders</span></div></div><a class="details" href="#contact" data-i="details">VIEW DETAILS →</a></div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-photo"><img src="product-05.webp" alt="Traditional embroidered cap" onclick="openLight(this)"></div>
+      <div class="product-info"><div class="product-number">05</div><h3 data-i="p5">Embroidered Traditional Cap</h3><p class="desc" data-i="p5d">A traditional cap with geometric embroidery and contrasting decorative motifs.</p><div class="meta"><div><b data-i="style">Style:</b> <span data-i="p5s">Geometric traditional embroidery</span></div><div><b data-i="use">Use:</b> <span data-i="p5u">Traditional and cultural wear</span></div><div><b data-i="order">Order:</b> <span data-i="orderText">Bulk & custom orders</span></div></div><a class="details" href="#contact" data-i="details">VIEW DETAILS →</a></div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-photo"><img src="product-06.webp" alt="White embroidered caps" onclick="openLight(this)"></div>
+      <div class="product-info"><div class="product-number">06</div><h3 data-i="p6">White Embroidered Caps</h3><p class="desc" data-i="p6d">A collection of white traditional caps with repeated red and dark geometric patterns.</p><div class="meta"><div><b data-i="style">Style:</b> <span data-i="p6s">Repeated geometric pattern</span></div><div><b data-i="use">Use:</b> <span data-i="p6u">Traditional and cultural wear</span></div><div><b data-i="order">Order:</b> <span data-i="orderText">Bulk & custom orders</span></div></div><a class="details" href="#contact" data-i="details">VIEW DETAILS →</a></div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-photo"><img src="product-07.webp" alt="Silver embroidered formal dress" onclick="openLight(this)"></div>
+      <div class="product-info"><div class="product-number">07</div><h3 data-i="p7">Silver Embroidered Formal Dress</h3><p class="desc" data-i="p7d">A silver-toned formal dress with dense decorative embroidery and shimmering details.</p><div class="meta"><div><b data-i="style">Style:</b> <span data-i="p7s">Elegant embellished embroidery</span></div><div><b data-i="use">Use:</b> <span data-i="p7u">Formal and traditional clothing</span></div><div><b data-i="order">Order:</b> <span data-i="orderText">Bulk & custom orders</span></div></div><a class="details" href="#contact" data-i="details">VIEW DETAILS →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section about-grid">
+    <div class="about-card"><h3 data-i="company">Nida Razmal LTD</h3><p data-i="aboutShort">Embroidery & textile products with traditional craftsmanship and modern quality.</p></div>
+    <div class="about-copy"><div class="eyebrow">About Us</div><h2 data-i="aboutTitle">Craftsmanship with a modern standard.</h2><p data-i="aboutText">We focus on quality embroidery, precise workmanship, custom designs and dependable service for customers and wholesale buyers.</p>
+      <div class="stats"><div class="stat"><b>01</b><span data-i="stat1">Quality</span></div><div class="stat"><b>02</b><span data-i="stat2">Precision</span></div><div class="stat"><b>03</b><span data-i="stat3">Trust</span></div><div class="stat"><b>04</b><span data-i="stat4">Global</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="title"><div class="eyebrow">Our Work</div><h2 data-i="galleryTitle">Our Gallery</h2><div class="line"></div><p data-i="gallerySub">A selection of embroidery work and collections.</p></div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="product-01.webp" alt="Embroidery gallery" onclick="openLight(this)"></div>
+    <div class="gallery-item"><img src="product-02.webp" alt="Embroidery gallery" onclick="openLight(this)"></div>
+    <div class="gallery-item"><img src="product-03.webp" alt="Embroidery gallery" onclick="openLight(this)"></div>
+    <div class="gallery-item"><img src="product-05.webp" alt="Embroidery gallery" onclick="openLight(this)"></div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="section why-grid">
+    <div><div class="eyebrow">Why Nida Razmal</div><h2 data-i="whyTitle">Made for quality, detail and trust.</h2><p data-i="whyText">From traditional embroidery to custom wholesale production, our presentation and service are built around professional textile work.</p></div>
+    <div class="why-list">
+      <div class="why-item"><div class="icon">◇</div><div><h3 data-i="w1">Premium Quality</h3><p data-i="w1d">Careful materials and finishing.</p></div></div>
+      <div class="why-item"><div class="icon">⚙</div><div><h3 data-i="w2">Custom Designs</h3><p data-i="w2d">Custom embroidery and bulk requirements.</p></div></div>
+      <div class="why-item"><div class="icon">◎</div><div><h3 data-i="w3">Worldwide Shipping</h3><p data-i="w3d">Packaging and delivery for international customers.</p></div></div>
+      <div class="why-item"><div class="icon">✓</div><div><h3 data-i="w4">Professional Service</h3><p data-i="w4d">Clear communication and dependable support.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div><h2 data-i="ctaTitle">Looking for a bulk order or custom embroidery?</h2><p data-i="ctaText">Contact Nida Razmal LTD for product details and quotations.</p></div>
+  <a class="btn" href="mailto:nidarazmalltd@gmail.com" data-i="getQuote">GET A QUOTE →</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-brand"><img src="image_1.webp" alt="Nida Razmal LTD"><div><strong>Nida Razmal LTD</strong><br><small>Embroidery</small></div></div><p data-i="footerDesc">Quality embroidery products with traditional craftsmanship and modern excellence.</p></div>
+    <div><h3 data-i="quick">Quick Links</h3><a href="#home" data-i="home">Home</a><a href="#products" data-i="products">Products</a><a href="#gallery" data-i="gallery">Gallery</a><a href="#about" data-i="about">About Us</a></div>
+    <div><h3 data-i="contactInfo">Contact</h3><p>✉ nidarazmalltd@gmail.com</p><p>💬 <a class="contact-link" href="https://wa.me/93704100130" target="_blank" rel="noopener">+93 70 410 0130</a></p><p>💬 <a class="contact-link" href="https://wa.me/93700205802" target="_blank" rel="noopener">+93 70 020 5802</a></p></div>
+    <div><h3 data-i="location">Location</h3><p>Shah Bazar, Kandahar, Afghanistan</p><a href="https://maps.app.goo.gl/29w5urNZ6YAUGTpD8" target="_blank" rel="noopener" data-i="map">📍 Open in Google Maps</a></div>
+  </div>
+  <div class="copyright">© 2026 Nida Razmal LTD. All Rights Reserved.</div>
+</footer>
+
+<div id="lightbox"><button onclick="closeLight()">×</button><img id="lightImg" alt=""></div>
+
+<script>
+const T={
+en:{
+home:'Home',products:'Products',gallery:'Gallery',about:'About Us',why:'Why Us',contact:'Contact',quote:'Get a Quote',
+heroTitle:'Exquisite<br>Embroidery<br>Products',heroText:'Traditional craftsmanship, premium quality and timeless beauty in every stitch.',ourProducts:'OUR PRODUCTS →',contactUs:'☎ CONTACT US',
+premiumQuality:'Premium Quality',premiumQualityDesc:'Fine materials and careful craftsmanship.',bulkOrders:'Custom Orders',bulkOrdersDesc:'Custom designs and wholesale production.',worldwideShipping:'Worldwide Shipping',worldwideShippingDesc:'Secure delivery for international customers.',trusted:'Trusted Company',trustedDesc:'Professional service and reliable quality.',
+productsTitle:'Our Products',productsSub:'Premium quality embroidery fabrics & products',style:'Style:',use:'Use:',order:'Order:',orderText:'Bulk & custom orders',details:'VIEW DETAILS →',
+p1:'Turquoise Embroidered Fabric',p1d:'A turquoise fabric featuring colorful floral embroidery and decorative vertical borders.',p1s:'Floral traditional embroidery',p1u:'Garments, shawls and textile designs',
+p2:'Gold Embroidered Dress',p2d:'An ornate gold-toned dress with detailed embroidery and decorative borders.',p2s:'Elegant formal embroidery',p2u:'Traditional and formal clothing',
+p3:'Black Embroidered Fabric',p3d:'Black fabric decorated with colorful floral motifs and flowing embroidered borders.',p3s:'Floral border embroidery',p3u:'Garments and traditional textile work',
+p4:'Detailed Floral Embroidery',p4d:'A close-up example showing fine floral motifs, leaves and decorative stitched details.',p4s:'Fine floral embroidery',p4u:'Decorative textile panels and garments',
+p5:'Embroidered Traditional Cap',p5d:'A traditional cap with geometric embroidery and contrasting decorative motifs.',p5s:'Geometric traditional embroidery',p5u:'Traditional and cultural wear',
+p6:'White Embroidered Caps',p6d:'A collection of white traditional caps with repeated red and dark geometric patterns.',p6s:'Repeated geometric pattern',p6u:'Traditional and cultural wear',
+p7:'Silver Embroidered Formal Dress',p7d:'A silver-toned formal dress with dense decorative embroidery and shimmering details.',p7s:'Elegant embellished embroidery',p7u:'Formal and traditional clothing',
+company:'Nida Razmal LTD',aboutShort:'Embroidery & textile products with traditional craftsmanship and modern quality.',aboutTitle:'Craftsmanship with a modern standard.',aboutText:'We focus on quality embroidery, precise workmanship, custom designs and dependable service for customers and wholesale buyers.',
+stat1:'Quality',stat2:'Precision',stat3:'Trust',stat4:'Global',galleryTitle:'Our Gallery',gallerySub:'A selection of embroidery work and collections.',
+whyTitle:'Made for quality, detail and trust.',whyText:'From traditional embroidery to custom wholesale production, our presentation and service are built around professional textile work.',
+w1:'Premium Quality',w1d:'Careful materials and finishing.',w2:'Custom Designs',w2d:'Custom embroidery and bulk requirements.',w3:'Worldwide Shipping',w3d:'Packaging and delivery for international customers.',w4:'Professional Service',w4d:'Clear communication and dependable support.',
+ctaTitle:'Looking for a bulk order or custom embroidery?',ctaText:'Contact Nida Razmal LTD for product details and quotations.',getQuote:'GET A QUOTE →',quick:'Quick Links',contactInfo:'Contact',location:'Location',map:'📍 Open in Google Maps',footerDesc:'Quality embroidery products with traditional craftsmanship and modern excellence.'
+},
+ps:{
+home:'کور',products:'محصولات',gallery:'ګالري',about:'زموږ په اړه',why:'ولې موږ؟',contact:'اړیکه',quote:'نرخ واخلئ',
+heroTitle:'ښکلي<br>ګلدوزي<br>محصولات',heroText:'دودیز هنر، لوړ کیفیت او تلپاتې ښکلا په هره ګنډنه کې.',ourProducts:'زموږ محصولات →',contactUs:'☎ اړیکه',
+premiumQuality:'لوړ کیفیت',premiumQualityDesc:'غوره مواد او په دقت سره جوړونه.',bulkOrders:'ځانګړي فرمایشونه',bulkOrdersDesc:'ځانګړي ډیزاینونه او عمده تولید.',worldwideShipping:'نړیوال لېږد',worldwideShippingDesc:'د نړیوالو مشتریانو لپاره خوندي لېږد.',trusted:'باوري شرکت',trustedDesc:'مسلکي خدمت او باوري کیفیت.',
+productsTitle:'زموږ محصولات',productsSub:'د لوړ کیفیت ګلدوزي ټوکران او محصولات',style:'سټایل:',use:'کارېدنه:',order:'فرمایش:',orderText:'عمده او ځانګړي فرمایشونه',details:'جزئیات وګورئ →',
+p1:'فیروزي ګلدوزي شوی ټوکر',p1d:'فیروزي رنګه ټوکر چې رنګارنګ ګلدار ګلدوزي او عمودي سینګاري کرښې لري.',p1s:'دودیزه ګلدار ګلدوزي',p1u:'جامې، شالونه او ټوکر ډیزاینونه',
+p2:'طلایي ګلدوزي شوې جامه',p2d:'طلایي رنګه ښکلې جامه چې تفصیلي ګلدوزي او سینګاري پولې لري.',p2s:'ښکلې رسمي ګلدوزي',p2u:'دودیزې او رسمي جامې',
+p3:'تور ګلدوزي شوی ټوکر',p3d:'تور ټوکر چې رنګارنګ ګلدار نقشونه او ګلدوزي شوې پولې لري.',p3s:'ګلدار د پولو ګلدوزي',p3u:'جامې او دودیز ټوکر کار',
+p4:'تفصیلي ګلدار ګلدوزي',p4d:'د تور ټوکر نږدې نمونه چې نازک ګلونه، پاڼې او ښکلي ګنډل شوي جزئیات ښيي.',p4s:'نازکه ګلدار ګلدوزي',p4u:'سینګاري ټوکر پینلونه او جامې',
+p5:'ګلدوزي شوې دودیزه خولۍ',p5d:'دودیزه خولۍ چې هندسي ګلدوزي او سینګاري نقشونه لري.',p5s:'هندسي دودیزه ګلدوزي',p5u:'دودیزې او کلتوري جامې',
+p6:'سپینې ګلدوزي شوې خولۍ',p6d:'د سپینو دودیزو خولیو ټولګه چې سور او تیاره هندسي نقشونه لري.',p6s:'تکراري هندسي نقش',p6u:'دودیزې او کلتوري جامې',
+p7:'نقره‌يي رسمي ګلدوزي جامه',p7d:'نقره‌يي رنګه رسمي جامه چې ګڼ سینګاري ګلدوزي او ځلېدونکي جزئیات لري.',p7s:'ښکلې سینګار شوې ګلدوزي',p7u:'رسمي او دودیزې جامې',
+company:'Nida Razmal LTD',aboutShort:'دودیز هنر او عصري کیفیت سره د ګلدوزۍ او ټوکر محصولات.',aboutTitle:'دودیز هنر د عصري معیارونو سره.',aboutText:'موږ د کیفیت ګلدوزۍ، دقیق کار، ځانګړو ډیزاینونو او باوري خدمت ته پاملرنه کوو.',
+stat1:'کیفیت',stat2:'دقت',stat3:'باور',stat4:'نړیوال',galleryTitle:'زموږ ګالري',gallerySub:'زموږ د ګلدوزۍ کارونو او ټولګو یوه برخه.',
+whyTitle:'کیفیت، دقت او باور.',whyText:'له دودیزې ګلدوزۍ څخه تر عمده ځانګړي تولید پورې، زموږ کار په مسلکي ټوکر خدمت ولاړ دی.',
+w1:'لوړ کیفیت',w1d:'غوره مواد او ښه پای.',w2:'ځانګړي ډیزاینونه',w2d:'ځانګړې ګلدوزي او عمده فرمایشونه.',w3:'نړیوال لېږد',w3d:'د نړیوالو مشتریانو لپاره بسته بندي او لېږد.',w4:'مسلکي خدمت',w4d:'روښانه اړیکه او باوري ملاتړ.',
+ctaTitle:'عمده فرمایش یا ځانګړې ګلدوزي غواړئ؟',ctaText:'د محصولاتو او نرخ لپاره له Nida Razmal LTD سره اړیکه ونیسئ.',getQuote:'نرخ واخلئ →',quick:'چټک لینکونه',contactInfo:'اړیکه',location:'ځای',map:'📍 په Google Maps کې خلاص کړئ',footerDesc:'دودیز هنر او عصري غوره‌والي سره د لوړ کیفیت ګلدوزۍ محصولات.'
+},
+fa:{
+home:'خانه',products:'محصولات',gallery:'گالری',about:'درباره ما',why:'چرا ما؟',contact:'تماس',quote:'دریافت قیمت',
+heroTitle:'محصولات<br>نفیس<br>گلدوزی',heroText:'صنعت‌گری سنتی، کیفیت عالی و زیبایی ماندگار در هر دوخت.',ourProducts:'محصولات ما →',contactUs:'☎ تماس با ما',
+premiumQuality:'کیفیت عالی',premiumQualityDesc:'مواد مرغوب و ساخت دقیق.',bulkOrders:'سفارش سفارشی',bulkOrdersDesc:'طرح‌های سفارشی و تولید عمده.',worldwideShipping:'ارسال بین‌المللی',worldwideShippingDesc:'ارسال مطمئن برای مشتریان بین‌المللی.',trusted:'شرکت قابل اعتماد',trustedDesc:'خدمات مسلکی و کیفیت قابل اعتماد.',
+productsTitle:'محصولات ما',productsSub:'پارچه‌ها و محصولات گلدوزی با کیفیت عالی',style:'سبک:',use:'کاربرد:',order:'سفارش:',orderText:'سفارش عمده و سفارشی',details:'جزئیات →',
+p1:'پارچه گلدوزی فیروزه‌ای',p1d:'پارچه فیروزه‌ای با گلدوزی گل‌دار رنگارنگ و نوارهای تزئینی عمودی.',p1s:'گلدوزی سنتی گل‌دار',p1u:'لباس، شال و طرح‌های نساجی',
+p2:'لباس گلدوزی طلایی',p2d:'لباس طلایی با گلدوزی دقیق و حاشیه‌های تزئینی.',p2s:'گلدوزی رسمی و ظریف',p2u:'لباس سنتی و رسمی',
+p3:'پارچه گلدوزی سیاه',p3d:'پارچه سیاه با نقش‌های گل‌دار رنگارنگ و حاشیه‌های گلدوزی‌شده.',p3s:'گلدوزی گل‌دار حاشیه‌ای',p3u:'لباس و کارهای نساجی سنتی',
+p4:'گلدوزی گل‌دار ظریف',p4d:'نمونه نزدیک از پارچه سیاه با گل‌ها، برگ‌ها و جزئیات ظریف گلدوزی.',p4s:'گلدوزی ظریف گل‌دار',p4u:'پنل‌های تزئینی و لباس',
+p5:'کلاه سنتی گلدوزی‌شده',p5d:'کلاه سنتی با گلدوزی هندسی و نقش‌های تزئینی متضاد.',p5s:'گلدوزی هندسی سنتی',p5u:'پوشاک سنتی و فرهنگی',
+p6:'کلاه‌های سفید گلدوزی‌شده',p6d:'مجموعه‌ای از کلاه‌های سفید سنتی با الگوهای هندسی قرمز و تیره.',p6s:'الگوی هندسی تکراری',p6u:'پوشاک سنتی و فرهنگی',
+p7:'لباس رسمی گلدوزی نقره‌ای',p7d:'لباس رسمی نقره‌ای با گلدوزی تزئینی متراکم و جزئیات درخشان.',p7s:'گلدوزی تزئینی ظریف',p7u:'لباس رسمی و سنتی',
+company:'Nida Razmal LTD',aboutShort:'محصولات گلدوزی و نساجی با هنر سنتی و کیفیت مدرن.',aboutTitle:'هنر سنتی با معیار مدرن.',aboutText:'ما بر گلدوزی باکیفیت، کار دقیق، طرح‌های سفارشی و خدمات قابل اعتماد تمرکز داریم.',
+stat1:'کیفیت',stat2:'دقت',stat3:'اعتماد',stat4:'جهانی',galleryTitle:'گالری ما',gallerySub:'نمونه‌ای از کارها و مجموعه‌های گلدوزی ما.',
+whyTitle:'برای کیفیت، دقت و اعتماد.',whyText:'از گلدوزی سنتی تا تولید عمده سفارشی، خدمات ما بر کار حرفه‌ای نساجی استوار است.',
+w1:'کیفیت عالی',w1d:'مواد مرغوب و پرداخت دقیق.',w2:'طرح‌های سفارشی',w2d:'گلدوزی سفارشی و سفارش‌های عمده.',w3:'ارسال بین‌المللی',w3d:'بسته‌بندی و ارسال برای مشتریان بین‌المللی.',w4:'خدمات مسلکی',w4d:'ارتباط روشن و پشتیبانی قابل اعتماد.',
+ctaTitle:'به سفارش عمده یا گلدوزی سفارشی نیاز دارید؟',ctaText:'برای جزئیات محصولات و قیمت با Nida Razmal LTD تماس بگیرید.',getQuote:'دریافت قیمت →',quick:'لینک‌های سریع',contactInfo:'تماس',location:'آدرس',map:'📍 باز کردن در Google Maps',footerDesc:'محصولات گلدوزی با کیفیت عالی، با هنر سنتی و برتری مدرن.'
+}};
+
+function setLang(lang){
+  const t=T[lang];
+  document.documentElement.lang=lang;
+  document.body.classList.toggle('rtl',lang!=='en');
+  document.querySelectorAll('[data-i]').forEach(el=>{
+    const key=el.dataset.i;
+    if(t[key]!==undefined) el.innerHTML=t[key];
+  });
+  document.querySelectorAll('.langs button,.mobile-langs button').forEach(b=>{
+    b.classList.toggle('active',b.textContent.trim()===(lang==='ps'?'پښتو':lang==='fa'?'دري':'English'));
+  });
+  localStorage.setItem('nidaLang',lang);
+}
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('show')}
+document.querySelectorAll('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('show')));
+function openLight(img){document.getElementById('lightImg').src=img.src;document.getElementById('lightbox').classList.add('show')}
+function closeLight(){document.getElementById('lightbox').classList.remove('show')}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLight()});
+setLang(localStorage.getItem('nidaLang')||'en');
+</script>
+</body>
+</html>
